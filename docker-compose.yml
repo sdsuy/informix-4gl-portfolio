@@ -1,0 +1,19 @@
+services:
+  informix:
+    image: icr.io/informix/informix-developer-database:14.10.FC9W1DE
+    container_name: ifx
+    hostname: ifx
+    privileged: true
+    environment:
+      LICENSE: accept
+    ports:
+      - "9088:9088"
+      - "9089:9089"
+      - "27017:27017"
+      - "27018:27018"
+      - "27883:27883"
+    volumes:
+      - ifx-vol:/opt/ibm/data
+
+volumes:
+  ifx-vol:
