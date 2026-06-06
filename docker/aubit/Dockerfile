@@ -3,10 +3,13 @@ FROM debian:bookworm-slim
 ENV DEBIAN_FRONTEND=noninteractive
 ENV AUBITDIR=/aubit4glsrc
 ENV A4GL_UI=TUI
-ENV A4GL_SQLTYPE=nosql
+ENV INFORMIXDIR=/opt/ibm/informix
+ENV INFORMIXSERVER=informix
+ENV INFORMIXSQLHOSTS=/opt/ibm/informix/etc/sqlhosts
+ENV A4GL_SQLTYPE=ifx
 ENV A4GL_DBDATE=DMY4
-ENV PATH=/aubit4glbin/bin:/aubit4glsrc/bin:$PATH
-ENV LD_LIBRARY_PATH=/aubit4glbin/lib:/aubit4glsrc/lib:$LD_LIBRARY_PATH
+ENV PATH=/aubit4glbin/bin:/aubit4glsrc/bin:/opt/ibm/informix/bin:$PATH
+ENV LD_LIBRARY_PATH=/aubit4glbin/lib:/aubit4glsrc/lib:/opt/ibm/informix/lib:/opt/ibm/informix/lib/esql:/opt/ibm/informix/lib/cli:$LD_LIBRARY_PATH
 
 RUN apt-get update && apt-get install -y \
     wget build-essential autoconf bison flex netcat-openbsd \
