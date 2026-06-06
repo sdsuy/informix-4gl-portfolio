@@ -1,1 +1,26 @@
+# Environment
 .env
+
+# Aubit generated objects
+*.ao
+*.o
+
+# Generated forms
+*.afr.dat
+
+# Binaries
+bin/*
+!bin/.gitkeep
+
+# Logs
+*.log
+
+# Core dumps
+core
+core.*
+
+# Editor
+.vscode/settings.json
+
+# SVN metadata if copied accidentally
+.svn
