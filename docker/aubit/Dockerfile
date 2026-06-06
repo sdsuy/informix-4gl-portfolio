@@ -9,7 +9,7 @@ ENV PATH=/aubit4glbin/bin:/aubit4glsrc/bin:$PATH
 ENV LD_LIBRARY_PATH=/aubit4glbin/lib:/aubit4glsrc/lib:$LD_LIBRARY_PATH
 
 RUN apt-get update && apt-get install -y \
-    wget build-essential autoconf bison flex \
+    wget build-essential autoconf bison flex netcat-openbsd \
     libncurses5 libncurses5-dev libncursesw5-dev \
     pkg-config unixodbc unixodbc-dev \
     libglib2.0-dev gawk libsigsegv2 sqlite3 \

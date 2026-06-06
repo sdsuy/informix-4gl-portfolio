@@ -24,6 +24,8 @@ services:
       - ${PROJECT_ROOT}:/work
     tty: true
     stdin_open: true
+    depends_on:
+      - informix
 
 volumes:
   ifx-vol:
