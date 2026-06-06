@@ -1,0 +1,5 @@
+src/customer_lookup.c: In function 'main':
+src/customer_lookup.c:93:4: warning: implicit declaration of function 'A4GL_init_session_with_sqltype'; did you mean 'A4GL_init_connection_with_sqltype'? [-Wimplicit-function-declaration]
+   93 |    A4GL_init_session_with_sqltype(A4GL_get_ident("src/customer_lookup","session_id","a000session_i05710"),"portfolio_db",_u,_p, _sqltype);
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |    A4GL_init_connection_with_sqltype
