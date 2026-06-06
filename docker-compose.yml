@@ -14,6 +14,16 @@ services:
       - "27883:27883"
     volumes:
       - ifx-vol:/opt/ibm/data
+  aubit:
+    build:
+      context: .
+      dockerfile: docker/aubit/Dockerfile
+    container_name: aubit4gl-dev
+    working_dir: /work
+    volumes:
+      - ${PROJECT_ROOT}:/work
+    tty: true
+    stdin_open: true
 
 volumes:
   ifx-vol:
